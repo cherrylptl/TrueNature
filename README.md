@@ -43,8 +43,9 @@ Enhance a basic ASP.NET Core MVC website by integrating a SQLite database to per
 1. Clone the repository:
    ```sh
    git clone https://github.com/cherrylptl/TrueNature.git
-   cd TrueNature
+   cd Assignment2
 
-## Run 
+### Run 
+2. Open Terminal:
    ```sh
    dotnet run
