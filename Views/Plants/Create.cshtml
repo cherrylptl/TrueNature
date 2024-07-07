@@ -12,34 +12,40 @@
         <div class="col-md-6">
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
                 <div class="form-group mb-3">
                     <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="form-control" placeholder="Enter plant name" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
+
                 <div class="form-group mb-3">
                     <label asp-for="Description" class="control-label"></label>
                     <textarea asp-for="Description" class="form-control"
                         placeholder="Enter plant description"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
+
                 <div class="form-group mb-3">
                     <label asp-for="Species" class="control-label"></label>
                     <input asp-for="Species" class="form-control" placeholder="Enter plant species" />
                     <span asp-validation-for="Species" class="text-danger"></span>
                 </div>
+
                 <div class="form-group mb-3">
                     <label asp-for="Price" class="control-label"></label>
                     <input asp-for="Price" class="form-control" type="number" step="1" min="0"
                         placeholder="Enter plant price" />
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
+
                 <div class="form-group mb-3">
                     <label asp-for="StockQuantity" class="control-label"></label>
                     <input asp-for="StockQuantity" class="form-control" type="number" step="1" min="0"
                         placeholder="Enter stock quantity" />
                     <span asp-validation-for="StockQuantity" class="text-danger"></span>
                 </div>
+
                 <div class="form-group text-center">
                     <input type="submit" value="Add" class="btn btn-primary" />
                     <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
@@ -48,3 +54,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
